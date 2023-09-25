@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>my diary</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+      integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="first-line">
+      <h1>My Diary</h1>
+      <div id = "filter_container">
+        <button id = "filter" tabindex="2">Filter</button>
+      </div>
+      <div class = "filter-mode-container">
+        <dialog id="filter-mode">
+            <div id = "checkbox-conatiner">
+              <input id="school" type="checkbox" >學業</input>
+              <br>
+              <input id="people" type="checkbox" >人際</input>
+              <br>
+              <input id="club" type="checkbox" >社團</input>
+              <br>
+              <input id="happy" type="checkbox" >快樂</input>
+              <br>
+              <input id="angry" type="checkbox" >生氣</input>
+              <br>
+              <input id="sad" type="checkbox" >難過</input>
+              <br>
+            </div>
+          <button id = "cancel-filter" >取消</button>
+          <button id = "finish-select">確認</button>
+        </dialog>
+            
+      </div>
+      <div id="add-new-diary">
+        <button id="diary-add" tabindex="3">新增日記</button>
+      </div>
+      <br>
+    </div>
+    <section id = "diarys"></section>
+    <section id = "diarys-edit"></section>
+    <section id = "diarys-view"></section>
+  </body>
+  <template id="todo-item-template">
+    <details id="" class="todo-item">
+      <summary>
+        <div>
+          <input data-id="" type="checkbox" />
+          <p class="todo-title">todo 1</p>
+        </div>
+        <button data-id="" class="delete-todo">delete</button>
+      </summary>
+      <p class="todo-description">todo 1 description</p>
+    </details>
+  </template>
+  <template id="diary-item-template">
+    <div data-id="" class="diary-item">
+          <p class="diary-date">date 1</p>
+          <p class="diary-tag1">tag 1</p>
+          <p class="diary-tag2">tag 2</p>
+          <button class = "browse">瀏覽</button>
+          <br>
+        <button data-id="" class="delete-diary">delete</button>
+    </div>
+  </template>
+  <template id = "diary-item-template-edit">
+    <details>
+    <dialog class="edit-mode">
+      <div class="top">
+        <div class="tags">
+          <select class="select-tag1" required>
+            <option disabled >請選擇標籤</option>
+            <option >學業</option>
+            <option >人際</option>
+            <option >社團</option>
+          </select>
+          <select class="select-tag2" required>
+            <option disabled >請選擇心情</option>
+            <option >快樂</option>
+            <option >生氣</option>
+            <option >難過</option>
+          </select>
+          <p id = "empty-block"></p>
+        </div>
+        <div class = "edit-date">
+          <input class = "date-year" type = "text">
+          <input class = "date-month" type = "text">
+          <input class = "date-date" type = "text">
+          <input class = "date-day" type = "text">
+        </div>
+      </div>
+      <div class = "diary-input-container">
+        <textarea
+          id="diary-input"
+          placeholder="description"
+          tabindex="2"
+          style="font-size:20px"
+        ></textarea>
+        <button data-id="" class = "edit-cancel">取消</button>
+        <button id = "diary-save">儲存</button>
+      </div>
+    </dialog>
+  </details>
+  </template>
+  <template id = "diary-item-template-edit2">
+    <details>
+    <dialog class="edit-mode">
+      <div class="top">
+        <div class="tags">
+          <select class="select-tag1" required>
+            <option disabled >請選擇標籤</option>
+            <option >學業</option>
+            <option >人際</option>
+            <option >社團</option>
+          </select>
+          <select class="select-tag2" required>
+            <option disabled >請選擇心情</option>
+            <option >快樂</option>
+            <option >生氣</option>
+            <option >難過</option>
+          </select>
+          <p id = "empty-block"></p>
+        </div>
+        <div class = "edit-date">
+          <p class = "current-date"></p>
+        </div>
+      </div>
+      <div class = "diary-input-container">
+        <textarea
+          id="diary-input"
+          placeholder="description"
+          tabindex="2"
+          style="font-size:20px"
+        ></textarea>
+        <button data-id="" class = "edit-cancel">取消</button>
+        <button id = "diary-save">儲存</button>
+      </div>
+    </dialog>
+  </details>
+  </template>
+  <template id="view-diary-template">
+    <div class = "diary-container">
+    <dialog class="view-mode">
+      <div class="top">
+        <div class="tags">
+          <p class="view-tag1">tag1</p>
+          <p class="view-tag2">tag2</p>
+          <p id = "empty-block"></p>
+        </div>
+        <p class = "history-date">2023.9.14</p>        
+      </div>
+      <div class = "diary-content-container">
+        <p class = "diary-content">內容</p>
+        <button data-id="" class = "view-cancel">返回主頁</button>
+        <button class = "diary-revise">編輯</button>
+      </div>
+    </dialog>
+        
+    </div>
+  </template>
+</html>

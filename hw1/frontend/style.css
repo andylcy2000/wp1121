@@ -1,0 +1,214 @@
+:root {
+  --todo-intput-height: 3rem;
+  --todo-intput-font-size: 2rem;
+}
+
+body {
+  background-color: #f4f3e1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+#first-line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+h1 {
+  text-align: center;
+  align-items: center;
+  font-size: 3rem;
+  display: inline-block;
+  flex-grow: 50;
+}
+
+button#filter{
+  height: var(--todo-intput-height);
+  font-size: 1em;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  display: inline-block;
+  
+}
+
+button#diary-add{
+  height: var(--todo-intput-height);
+  font-size: 1em;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  display: inline-block;
+  
+}
+
+
+
+.diary-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.diary-date {
+  font-size: 20px;
+  border: 1px solid;
+  display: inline-block;
+}
+
+.diary-tag1 {
+  font-size: 20px;
+  border: 1px solid;
+  display: inline-block;
+}
+
+.diary-tag2 {
+  font-size: 20px;
+  border: 1px solid;
+  display: inline-block;
+}
+
+button.browse {
+  height: var(--todo-intput-height);
+  font-size: 1em;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.edit-mode, .view-mode,#filter-mode{
+  height: 500px;
+  width: 900px;
+  border: none;
+  box-shadow: 0 2px 6px #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 25%;
+}
+
+#filter-mode {
+  font-size: 1.3em;
+}
+
+
+.top{
+  display: flex;
+  align-items: baseline;
+  height: 70px;
+  width: 100%;
+}
+
+.tags{
+  display: inline-block;
+}
+
+.select-tag1, .view-tag1{
+  font-size: 1rem;
+  height: 30px;
+  width: 70px;
+  border: solid black;
+  border-radius: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+.select-tag2, .view-tag2{
+  font-size: 1rem;
+  height: 30px;
+  width: 70px;
+  border: solid black;
+  border-radius: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+#empty-block{
+  height: 10px;
+  width: 400px;
+  display: inline-block;
+  border: none;
+}
+.edit-date, .history-date{
+  font-size: 1.2rem;
+  height: 2px;
+  width: 300px;
+  border: none;
+  border-radius: 10px;
+  align-items: right;
+  display: inline;
+  left: 200px;
+}
+
+.diary-input-container, .diary-content-container {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  gap: 1rem;
+}
+
+#diary-input, .diary-content {
+  width: 40%;
+  margin-top: 1rem;
+  height: 10rem;
+  resize: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  display: block;
+
+
+}
+
+.date-year , .date-day {
+  width: 20%;
+  margin-top: 1rem;
+  height: 10%;
+  resize: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 0.3px solid #ccc;
+  display: inline-block;
+}
+
+.date-month, .date-date{
+  width: 12%;
+  margin-top: 1rem;
+  height: 10%;
+  resize: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 0.3px solid #ccc;
+  display: inline-block;
+}
+
+
+
+button.edit-cancel, button.view-cancel,button#cancel-filter{
+  height: var(--todo-intput-height);
+  font-size: 1em;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  align-items: right;
+  position: absolute;
+  top:75%;
+  left:20%;
+  
+}
+
+
+button#diary-save, button.diary-revise, button#finish-select{
+  height: var(--todo-intput-height);
+  font-size: 1em;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  align-items: right;
+  position: absolute;
+  top:75%;
+  left:90%;
+  
+}
+
+
