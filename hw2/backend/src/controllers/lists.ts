@@ -1,0 +1,154 @@
+import CardModel from "../models/card";
+import ListModel from "../models/list";
+import { genericErrorHandler } from "../utils/errors";
+import type {
+  CardData,
+  CreateListPayload,
+  CreateListResponse,
+  //GetListsResponse,
+  ListData,
+  UpdateListPayload,
+} from "@lib/shared_types";
+import type { Request, Response } from "express";
+type GetListsResponse1 ={
+  id: string;
+  name: string;
+  description: string;
+};
+
+type GetListsResponse = GetListsResponse1[];
+
+// Get all lists
+export const getLists = async (_: Request, res: Response<GetListsResponse>) => {
+  try {
+    const lists = await ListModel.find({});
+    //console.log(1);
+    // Return only the id and name of the list
+    const listsToReturn = lists.map((list) => {
+      return {
+        id: list.id,
+        name: list.name,
+        description: list.description,
+      };
+    });
+
+    return res.status(200).json(listsToReturn);
+  } catch (error) {
+    genericErrorHandler(error, res);
+  }
+};
+
+// Get a list
+export const getList = async (
+  req: Request<{ id: string }>,
+  res: Response<ListData | { error: string }>,
+) => {
+  try {
+    const { id } = req.params;
+    const lists = await ListModel.findById(id).populate("cards");
+    if (!lists) {
+      return res.status(404).json({ error: "id is not valid" });
+    }
+
+    return res.status(200).json({
+      id: lists.id,
+      name: lists.name,
+      cards: lists.cards as unknown as CardData[],
+      description: lists.description,
+    });
+  } catch (error) {
+    genericErrorHandler(error, res);
+  }
+};
+
+// Create a list
+export const createList = async (
+  req: Request<never, never, CreateListPayload>,
+  res: Response<CreateListResponse>,
+) => {
+  try {
+    const { id } = await ListModel.create(req.body);
+    return res.status(201).json({ id });
+  } catch (error) {
+    genericErrorHandler(error, res);
+  }
+};
+
+// Update a list
+export const updateList = async (
+  req: Request<{ id: string }, never, UpdateListPayload>,
+  res: Response,
+) => {
+  try {
+    const { id } = req.params;
+    const { name } = req.body;
+    const { description } = req.body;
+    // Update the list
+    let newList:unknown;
+    if (name){
+      newList = await ListModel.findByIdAndUpdate(
+        id,
+        {
+          name: name,
+        },
+        { new: true },
+      );
+    }
+
+    if (description){
+      newList = await ListModel.findByIdAndUpdate(
+        id,
+        {
+          description:description,
+        },
+        { new: true },
+      );
+    }
+
+
+    // If the list is not found, return 404
+    if (!newList) {
+      return res.status(404).json({ error: "id is not valid" });
+    }
+
+    return res.status(200).send("OK");
+  } catch (error) {
+    genericErrorHandler(error, res);
+  }
+};
+
+// Delete a list
+export const deleteList = async (
+  req: Request<{ id: string }>,
+  res: Response,
+) => {
+  // Create a transaction
+  const session = await ListModel.startSession();
+  session.startTransaction();
+
+  try {
+    const { id } = req.params;
+
+    // Delete the list
+    const deletedList = await ListModel.findByIdAndDelete(id);
+
+    // If the list is not found, return 404
+    if (!deletedList) {
+      return res.status(404).json({ error: "id is not valid" });
+    }
+
+    // Delete all the cards in the list
+    deletedList.cards.forEach(async (cardId) => {
+      await CardModel.findByIdAndDelete(cardId);
+    });
+
+    // Commit the transaction
+    await session.commitTransaction();
+
+    return res.status(200).send("OK");
+  } catch (error) {
+    // Rollback the transaction
+    await session.abortTransaction();
+    genericErrorHandler(error, res);
+  }
+};
