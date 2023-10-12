@@ -6,12 +6,20 @@ import { useUser } from '@/contexts/UserContext';
 
 const View = (): React.ReactNode => {
   const { user } = useUser();
-  const { getPostByIndex, votePost } = usePost();
-
+  const { getPostByIndex, votePost ,numPosts, getPostIndicesByUserId} = usePost();
+  //const {posts} =usePost();
   /* (1/3) TODO 2.2: Navigation with `ViewFooter` Buttons (8%) */
   /* Hint 2.2.1: Link page index to React state */
+  const {pageindex, usePageindex} = useState(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const post = getPostByIndex(0);
+  const posts = getPostIndicesByUserId(user?._id);
+  /*
+  let posts =[] as any;
+  for (let i=0;i<numPosts;i++){
+    posts.push(getPostByIndex(i));
+  }
+  */
   /* End (1/3) TODO 2.2 */
 
   /* (3/3) TODO 2.2: Navigation with `ViewFooter` Buttons (8%) */
@@ -57,7 +65,7 @@ const View = (): React.ReactNode => {
       {/* TODO 2.1: Render Post With `PostCard` and `PostContext` (3%) */}
       {/* Hint 2.1.1: Pass correct arguments to `PostCard` component */}
       {/* Hint 2.1.2: Arguments `post` should be Modified */}
-      <PostCard post={null} />
+      {posts.map((post:any) => {<PostCard post={post} />})}
       {/* End TODO 2.1 */}
 
       <div className="mt-auto">
@@ -68,12 +76,12 @@ const View = (): React.ReactNode => {
         {/* Hint 2.4.5: Arguments `downvoteClickHandler`, `upvoteClickHandler`, `hasUpvoted`, `hasDownvoted` and `totalVotes` should be Modified */}
         {/* Hint 2.4.5: Arguments `downvoteClickHandler`, `upvoteClickHandler`, `hasUpvoted`, `hasDownvoted` and `totalVotes` should be Modified */}
         <ViewFooter
-          downvoteClickHandler={() => {}}
-          upvoteClickHandler={() => {}}
+          downvoteClickHandler={() => handleVoteClick('downvote')}
+          upvoteClickHandler={() => {handleVoteClick('upvote')}}
           hasDownvoted={false}
           hasUpvoted={false}
-          nextClickHandler={() => {}}
-          prevClickHandler={() => {}}
+          nextClickHandler={() => {handleNextClick}}
+          prevClickHandler={() => {handlePrevClick}}
           totalVotes={0}
           loading={false}
         />
