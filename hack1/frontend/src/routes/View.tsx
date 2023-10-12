@@ -13,7 +13,7 @@ const View = (): React.ReactNode => {
   const {pageindex, usePageindex} = useState(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const post = getPostByIndex(0);
-  const posts = getPostIndicesByUserId(user?._id);
+  const posts = getPostIndicesByUserId(user?._id.toString());
   /*
   let posts =[] as any;
   for (let i=0;i<numPosts;i++){
@@ -25,8 +25,8 @@ const View = (): React.ReactNode => {
   /* (3/3) TODO 2.2: Navigation with `ViewFooter` Buttons (8%) */
   /* Hint 2.2.4: Finish next and prev click Handler */
   /* Hint 2.2.5: Refer to `PostContext` for more clue */
-  const handleNextClick = useCallback(() => {}, []);
-  const handlePrevClick = useCallback(() => {}, []);
+  const handleNextClick = useCallback((index:any) => {getPostByIndex(index+1)}, []);
+  const handlePrevClick = useCallback((index:any) => {getPostByIndex(index-1)}, []);
   /* End (3/3) TODO 2.2 */
 
   /* (1/3) TODO 2.4: Handle Voting for Unvoted Posts (8%) */
