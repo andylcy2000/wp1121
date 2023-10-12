@@ -1,0 +1,1048 @@
+{
+  "config": {
+    "configFile": "/home/licheng-yan/WebProgramming/wp1121/hack1/playwright.config.ts",
+    "rootDir": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/test-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "on-failure"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/licheng-yan/WebProgramming/wp1121/hack1/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.38.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "public-1.spec.ts",
+      "file": "public-1.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "1.1 Title and Login Page Title (5%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 10396,
+                  "error": {
+                    "message": "fetch failed",
+                    "stack": "TypeError: fetch failed\n    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:7:3",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 3,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 3,
+                        "line": 17
+                      },
+                      "message": "TypeError: fetch failed\n\n\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\n\u001b[2m    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:7:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:12.758Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 3,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0d167401047ff53989ee-2c236d05c1540f3c991c",
+          "file": "public-1.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "1.2 Redirect to Login Page (5%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 343,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/\", waiting until \"load\"\n============================================================\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:22:14",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                      "column": 14,
+                      "line": 22
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m test(\u001b[32m'1.2 Redirect to Login Page (5%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// Expect redirect to login page (check link)\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                        "column": 14,
+                        "line": 22
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 20 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m test(\u001b[32m'1.2 Redirect to Login Page (5%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// Expect redirect to login page (check link)\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:22:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:28.893Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                    "column": 14,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0d167401047ff53989ee-c05667892103f2e6ee49",
+          "file": "public-1.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "1.3 Route Configuration for Login and Register Pages (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 225,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:29:14",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                      "column": 14,
+                      "line": 29
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 27 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m test(\u001b[32m'1.3 Route Configuration for Login and Register Pages (8%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m loginTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'tab-login'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m   \u001b[36mconst\u001b[39m registerTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'tab-register'\u001b[39m)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                        "column": 14,
+                        "line": 29
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 27 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m test(\u001b[32m'1.3 Route Configuration for Login and Register Pages (8%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m loginTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'tab-login'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m   \u001b[36mconst\u001b[39m registerTab \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'tab-register'\u001b[39m)\u001b[0m\n\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:29:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:29.771Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                    "column": 14,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0d167401047ff53989ee-99ba161eb4f113f3cd50",
+          "file": "public-1.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "1.4 Login Fails for Unregistered Users (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 246,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:66:14",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                      "column": 14,
+                      "line": 66
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 64 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 65 |\u001b[39m test(\u001b[32m'1.4 Login Fails for Unregistered Users (8%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 68 |\u001b[39m   \u001b[36mconst\u001b[39m usernameInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m   \u001b[36mconst\u001b[39m passwordInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                        "column": 14,
+                        "line": 66
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 64 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 65 |\u001b[39m test(\u001b[32m'1.4 Login Fails for Unregistered Users (8%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 68 |\u001b[39m   \u001b[36mconst\u001b[39m usernameInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m   \u001b[36mconst\u001b[39m passwordInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[0m\n\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:66:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:30.540Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                    "column": 14,
+                    "line": 66
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0d167401047ff53989ee-28fe486f9c7c40ea9573",
+          "file": "public-1.spec.ts",
+          "line": 65,
+          "column": 1
+        },
+        {
+          "title": "1.5 Ensure User Registration Functions Properly (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 225,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/register\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/register\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/register\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/register\", waiting until \"load\"\n============================================================\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:89:14",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                      "column": 14,
+                      "line": 89
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 87 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 88 |\u001b[39m test(\u001b[32m'1.5 Ensure User Registration Functions Properly (8%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 89 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/register`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 90 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 91 |\u001b[39m   \u001b[36mconst\u001b[39m usernameInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 92 |\u001b[39m   \u001b[36mconst\u001b[39m passwordInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                        "column": 14,
+                        "line": 89
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/register\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/register\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 87 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 88 |\u001b[39m test(\u001b[32m'1.5 Ensure User Registration Functions Properly (8%)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 89 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/register`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 90 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 91 |\u001b[39m   \u001b[36mconst\u001b[39m usernameInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 92 |\u001b[39m   \u001b[36mconst\u001b[39m passwordInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[0m\n\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts:89:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:31.331Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-1.spec.ts",
+                    "column": 14,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0d167401047ff53989ee-72587c19f5319215e1dd",
+          "file": "public-1.spec.ts",
+          "line": 88,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "public-2.spec.ts",
+      "file": "public-2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "2.1 Render Post With PostCard and PostContext (3%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "failed",
+                  "duration": 251,
+                  "error": {
+                    "message": "fetch failed",
+                    "stack": "TypeError: fetch failed\n    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:5:3",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 3,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 3,
+                        "line": 17
+                      },
+                      "message": "TypeError: fetch failed\n\n\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\n\u001b[2m    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:5:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:32.113Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 3,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "217b455dbe69f8484f39-93c91095f2734d63c840",
+          "file": "public-2.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "2.2 Navigation with ViewFooter Buttons (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "failed",
+                  "duration": 241,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:11:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:11:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:32.902Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "217b455dbe69f8484f39-091bb38d96d46e351137",
+          "file": "public-2.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "2.3 Navigation with Keyboard (5%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "status": "failed",
+                  "duration": 258,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:38:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:38:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:33.675Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "217b455dbe69f8484f39-4b632f0e1a4dcb454542",
+          "file": "public-2.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "2.4 Handle Voting for Unvoted Posts (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "status": "failed",
+                  "duration": 246,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:67:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-2.spec.ts:67:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:34.467Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "217b455dbe69f8484f39-65b0328734ffd97cbcb8",
+          "file": "public-2.spec.ts",
+          "line": 62,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "public-3.spec.ts",
+      "file": "public-3.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "3.1 Create a New Post With the Editor (5%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "status": "failed",
+                  "duration": 243,
+                  "error": {
+                    "message": "fetch failed",
+                    "stack": "TypeError: fetch failed\n    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-3.spec.ts:5:3",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 3,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 3,
+                        "line": 17
+                      },
+                      "message": "TypeError: fetch failed\n\n\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\n\u001b[2m    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-3.spec.ts:5:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:35.248Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 3,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3dfbc6777ccf4a43e304-bef8d76efc2415c9fc19",
+          "file": "public-3.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "3.2 View User Posts With Files Tab (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "status": "failed",
+                  "duration": 232,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-3.spec.ts:31:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-3.spec.ts:31:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:36.044Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3dfbc6777ccf4a43e304-3a60889996ded1f7e702",
+          "file": "public-3.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "3.3 Edit User Posts With Editor (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "status": "failed",
+                  "duration": 233,
+                  "error": {
+                    "message": "fetch failed",
+                    "stack": "TypeError: fetch failed\n    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-3.spec.ts:47:3",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 3,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 3,
+                        "line": 17
+                      },
+                      "message": "TypeError: fetch failed\n\n\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\n\u001b[2m    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-3.spec.ts:47:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:36.820Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 3,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3dfbc6777ccf4a43e304-5fafb4a72e4fd8af7309",
+          "file": "public-3.spec.ts",
+          "line": 41,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "public-4.spec.ts",
+      "file": "public-4.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "4.1 Render User Information - bio (4%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "status": "failed",
+                  "duration": 256,
+                  "error": {
+                    "message": "fetch failed",
+                    "stack": "TypeError: fetch failed\n    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:5:3",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 3,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 3,
+                        "line": 17
+                      },
+                      "message": "TypeError: fetch failed\n\n\u001b[90m   at \u001b[39mutils.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m setup \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m fetch(\u001b[32m`http://localhost:${PORT}/api/init`\u001b[39m\u001b[33m,\u001b[39m { method\u001b[33m:\u001b[39m \u001b[32m'POST'\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\n\u001b[2m    at setup (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:17:3)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:5:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:37.587Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 3,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "401d35a68f3df5200eb1-23d09402447ce1dd6755",
+          "file": "public-4.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "4.2 Render User Information - gender (8%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "status": "failed",
+                  "duration": 234,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:19:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:19:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:38.358Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "401d35a68f3df5200eb1-95914655a398d7cc7f79",
+          "file": "public-4.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "4.3 Render User Information - profile picture 1 (6%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "status": "failed",
+                  "duration": 238,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:29:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:29:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:39.129Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "401d35a68f3df5200eb1-d627b7ca9472ed7c10d2",
+          "file": "public-4.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "4.4 Update User Information (6%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "status": "failed",
+                  "duration": 311,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:50:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:50:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:39.912Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "401d35a68f3df5200eb1-81c26121bcab8904bc96",
+          "file": "public-4.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "4.5 Render User Information - profile picture 2 (5%)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "status": "failed",
+                  "duration": 229,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\n    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:74:9",
+                    "location": {
+                      "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                      "column": 14,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/login\n=========================== logs ===========================\nnavigating to \"http://localhost:5173/login\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mutils.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m login \u001b[33m=\u001b[39m \u001b[36masync\u001b[39m (page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m username \u001b[33m=\u001b[39m \u001b[32m'test'\u001b[39m) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`http://localhost:${VITE_PORT}/login`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-username'\u001b[39m)\u001b[33m.\u001b[39mfill(username)\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'input-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'123'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Login'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at login (/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts:21:14)\u001b[22m\n\u001b[2m    at /home/licheng-yan/WebProgramming/wp1121/hack1/tests/public-4.spec.ts:74:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-12T01:40:40.804Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/home/licheng-yan/WebProgramming/wp1121/hack1/tests/utils.ts",
+                    "column": 14,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "401d35a68f3df5200eb1-599fd858acd641d5ad82",
+          "file": "public-4.spec.ts",
+          "line": 73,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
